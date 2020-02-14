@@ -17,10 +17,10 @@ something like a "low level API" to spacing.
 Coming from a more component based approach of composing interfaces, the components
 come with a high level API for a variety of purposes, sometimes called "props" or
 "attributes".
-It is up the librarys author to chose the level of exposure. But it seem reasonable
+It is up to the librarys author to chose the level of their exposure. But it seem reasonable
 not to expose the whole CSS styling API in order to prevent abuse or unexpected
 behavior.
-This said you may want to offer some kind of high level API in form of configuration
+This said you may want to offer some kind of high level API in the shape a of configuration
 through props.
 
 ## Spec
@@ -28,7 +28,7 @@ Similar to the CSS box model this spec provides two kinds of spacings:
 "outer spaces" as a way to set the margin around a component and "inner spaces"
 for the padding equivalent.
 While the former will be discussed in detail, the latter mostly adapts the same
-principles and will probably become used less commonly.
+principles and will probably become used less common.
 
 ### Formal syntax
 <dl>
@@ -39,12 +39,12 @@ principles and will probably become used less commonly.
 </dl>
 
 #### Shorthand Notation
-As known from `margin` and `padding` CSS props, this spec offers a shorthand notation `outerSpace`.
+As known from `margin` and `padding` CSS properties, this spec offers a shorthand notation: `outerSpace`.
 ```
 [ <spacing> | auto ]{1,4}
 ```
 
-| | |
+| Variant | Description |
 |--|--|
 |`[all]`| Apply to all four sides |
 |`[block, inline]`| vertical \| horizontal |
@@ -59,7 +59,7 @@ Single direction properties are offfered as well:
 - `outerSpaceInlineEnd`
 
 ```
-[ <spacing> | auto ]
+<spacing> | auto
 ```
 
 
