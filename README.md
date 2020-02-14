@@ -3,7 +3,7 @@
 A spec proposal for a common spacing API among components of a design system.
 
 ## Table of Contents
-1. [Ratonale](#rationale)
+1. [Rationale](#rationale)
 2. [Spec](#spec)
 3. [Examples](#examples)
 4. [Note on Adaptive Space Sizes](#note-on-adaptive-space-sizes)
@@ -17,9 +17,9 @@ something like a "low level API" to spacing.
 Coming from a more component based approach of composing interfaces, the components
 come with a high level API for a variety of purposes, sometimes called "props" or
 "attributes".
-It is up to the librarys author to chose the level of their exposure. But it seem reasonable
-not to expose the whole CSS styling API in order to prevent abuse or unexpected
-behavior.
+It is up to the librarys author to choose the level of their exposure. But it seems
+reasonable not to expose the whole CSS styling API in order to prevent abuse or
+unexpected behavior.
 This said you may want to offer some kind of high level API in the shape a of configuration
 through props.
 
@@ -28,7 +28,7 @@ Similar to the CSS box model this spec provides two kinds of spacings:
 "outer spaces" as a way to set the margin around a component and "inner spaces"
 for the padding equivalent.
 While the former will be discussed in detail, the latter mostly adapts the same
-principles and will probably become used less common.
+principles and will probably get used less commonly.
 
 ### Formal syntax
 <dl>
@@ -52,7 +52,7 @@ As known from `margin` and `padding` CSS properties, this spec offers a shorthan
 |`[block-start, inline-end, block-end, inline-start]`| top \| right \| bottom \| left |
 
 #### Single direction
-Single direction properties are offfered as well:
+Single direction properties are offered as well:
 - `outerSpaceBlockStart`
 - `outerSpaceBlockEnd`
 - `outerSpaceInlineStart`
@@ -89,7 +89,7 @@ import { MyComponent, Spaces } from '@scope/design-system';
 /** Resulting styles
  * margin: var(--space--m) var(space--s) var(--space--xl);
  * 
- * @supports(margin-block: 0) {
+ * @supports(margin-block-end: 0) {
  *     margin-block-start: var(--space--m);
  *     margin-block-end: var(--space--xl);
  *     margin-inline-start: var(--space--s);
@@ -107,7 +107,7 @@ import { MyComponent, Spaces } from '@scope/design-system';
 /** Resulting styles
  * margin-bottom: var(--space--xl);
  * 
- * @supports(margin-block-end: auto) {
+ * @supports(margin-block-end: 0) {
  *     margin-block-end: var(--space--xl);
  * }
 */
@@ -123,7 +123,7 @@ By using CSS Custom Properties, this can be archived fairly simple:
     --space--m: 8px;
     --space--xl: 16px;
 
-    @media (min-width: 640px) {
+    @media (min-width: 640px;) {
         --space--s: 6px;
         --space--m: 12px;
         --space--xl: 24px;
@@ -146,7 +146,7 @@ import { MyComponent, Spaces } from '@scope/design-system';
  * margin-top: 8px;
  * margin-bottom: var(--space--xl);
  * 
- * @supports(margin-block-end: auto) {
+ * @supports(margin-block-end: 0) {
  *     margin-block-start: 8px;
  *     margin-block-end: var(--space--xl);
  * }
