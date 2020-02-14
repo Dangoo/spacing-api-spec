@@ -11,18 +11,18 @@ import { expand } from "./expand";
  * @returns {S[]}
  */
 export function mergeSizes<S>(
-    shorthand: [] | [S] | Tuple<S> | Triple<S> | Quadrupel<S> = [],
-    blockStart?: S,
-    inlineEnd?: S,
-    blockEnd?: S,
-    inlineStart?: S
+  shorthand: [] | [S] | Tuple<S> | Triple<S> | Quadrupel<S> = [],
+  blockStart?: S,
+  inlineEnd?: S,
+  blockEnd?: S,
+  inlineStart?: S
 ): Quadrupel<S | undefined> {
   const expanded = expand(shorthand);
 
   return [
-    blockStart || expanded[0],
-    inlineEnd || expanded[1],
-    blockEnd || expanded[2],
-    inlineStart || expanded[3],
+    typeof blockStart !== 'undefined' ? blockStart : expanded[0],
+    typeof inlineEnd !== 'undefined' ? inlineEnd : expanded[1],
+    typeof blockEnd !== 'undefined' ? blockEnd : expanded[2],
+    typeof inlineStart !== 'undefined' ? inlineStart : expanded[3],
   ];
 }
