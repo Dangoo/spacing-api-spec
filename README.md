@@ -17,7 +17,7 @@ something like a "low level API" to spacing.
 Coming from a more component based approach of composing interfaces, the components
 come with a high level API for a variety of purposes, sometimes called "props" or
 "attributes".
-It is up to the librarys author to choose the level of their exposure. But it seems
+It is up to the author of the library to choose the level of their exposure. But it seems
 reasonable not to expose the whole CSS styling API in order to prevent abuse or
 unexpected behavior.
 This said you may want to offer some kind of high level API in the shape a of configuration
@@ -73,7 +73,7 @@ to [CSS logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS
 ```typescript
 import { MyComponent, Spaces } from '@scope/design-system';
 
-<MyComponent outerSpace=[Spaces.M]>
+<MyComponent outerSpace={[Spaces.M]}>
 
 /** Resulting styles
  * margin: var(--space--m);
@@ -84,7 +84,7 @@ import { MyComponent, Spaces } from '@scope/design-system';
 ```typescript
 import { MyComponent, Spaces } from '@scope/design-system';
 
-<MyComponent outerSpace=[Spaces.M, Spaces.S, Spaces.XL]>
+<MyComponent outerSpace={[Spaces.M, Spaces.S, Spaces.XL]}>
 
 /** Resulting styles
  * margin: var(--space--m) var(space--s) var(--space--xl);

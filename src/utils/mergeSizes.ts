@@ -1,4 +1,6 @@
 import { Tuple, Triple, Quadrupel } from "../SpaceProps";
+import { expand } from "./expand";
+
 /**
  * @template S
  * @param {S[]} shorthand List of up to four sizes defined clockwise starting with top
@@ -15,10 +17,12 @@ export function mergeSizes<S>(
     blockEnd?: S,
     inlineStart?: S
 ): Quadrupel<S | undefined> {
+  const expanded = expand(shorthand);
+
   return [
-    blockStart || shorthand[0],
-    inlineEnd || shorthand[1],
-    blockEnd || shorthand[2],
-    inlineStart || shorthand[3],
+    blockStart || expanded[0],
+    inlineEnd || expanded[1],
+    blockEnd || expanded[2],
+    inlineStart || expanded[3],
   ];
 }
