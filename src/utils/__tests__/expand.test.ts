@@ -25,12 +25,6 @@ describe('expand', (): void => {
         expect(res).toStrictEqual([0, 1, 2, 1]);
     });
 
-    it('expands correctly from three entries', () => {
-        const res = expand([0, 1, 2]);
-
-        expect(res).toStrictEqual([0, 1, 2, 1]);
-    });
-
     it('returns a clone of source from 4 entries', () => {
         const source = [0, 1, 2, 3];
         const res = expand(source);
