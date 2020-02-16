@@ -5,7 +5,7 @@ import { Quadrupel } from '../SpaceProps';
  * @param {S[]} source
  * @returns {([] | Quadrupel<S>)}
  */
-export function expand<S>(source: S[]): [] | Quadrupel<S> {
+export function expandSizes<S>(source: S[]): [] | Quadrupel<S> {
   switch (source.length) {
     case 0:
       return [];

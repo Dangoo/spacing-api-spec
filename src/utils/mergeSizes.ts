@@ -1,5 +1,5 @@
 import { Tuple, Triple, Quadrupel } from '../SpaceProps';
-import { expand } from './expand';
+import { expandSizes } from './expandSizes';
 
 /**
  * @template S
@@ -11,7 +11,7 @@ export function mergeSizes<S>(
   shorthand: [] | [S] | Tuple<S> | Triple<S> | Quadrupel<S> = [],
   overrides: [] | Quadrupel<S>
 ): Quadrupel<S | undefined> {
-  const expanded = expand(shorthand);
+  const expanded = expandSizes(shorthand);
   const [
     blockStart = expanded[0],
     inlineEnd = expanded[1],

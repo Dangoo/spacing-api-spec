@@ -1,3 +1,3 @@
 export { InnerSpaceProps, OuterSpaceProps } from './SpaceProps';
-export { expand } from './utils/expand';
+export { expandSizes } from './utils/expandSizes';
 export { mergeSizes } from './utils/mergeSizes';
