@@ -1,4 +1,4 @@
-import { Quadrupel } from "../SpaceProps";
+import { Quadrupel } from '../SpaceProps';
 
 /**
  * @template S

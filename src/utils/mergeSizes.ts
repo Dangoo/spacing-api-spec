@@ -1,10 +1,10 @@
-import { Tuple, Triple, Quadrupel } from "../SpaceProps";
-import { expand } from "./expand";
+import { Tuple, Triple, Quadrupel } from '../SpaceProps';
+import { expand } from './expand';
 
 /**
  * @template S
  * @param {S[]} shorthand List of up to four sizes defined clockwise starting with top
- * @param {[S, S, S, S]} overrides List of four overrid sizes defined clockwise starting with top
+ * @param {[S, S, S, S]} overrides List of four override sizes defined clockwise starting with top
  * @returns {S[]}
  */
 export function mergeSizes<S>(
@@ -19,10 +19,5 @@ export function mergeSizes<S>(
     inlineStart = expanded[3]
   ] = overrides;
 
-  return [
-    blockStart,
-    inlineEnd,
-    blockEnd,
-    inlineStart
-  ];
+  return [blockStart, inlineEnd, blockEnd, inlineStart];
 }
