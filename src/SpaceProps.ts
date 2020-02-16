@@ -1,15 +1,16 @@
 type Spacing<S> = S | 'auto';
 
-export type Tuple<T> = [T, T];
-export type Triple<T> = [T, T, T];
-export type Quadrupel<T> = [T, T, T, T];
+export type Tuple<S> = [S, S];
+export type Triple<S> = [S, S, S];
+export type Quadrupel<S> = [S, S, S, S];
+export type ShorthandList<S> =
+  | [S]
+  | Tuple<S>
+  | Triple<S>
+  | Quadrupel<S>;
 
 export interface OuterSpaceProps<S> {
-  outerSpace?:
-    | [Spacing<S>]
-    | Tuple<Spacing<S>>
-    | Triple<Spacing<S>>
-    | Quadrupel<Spacing<S>>;
+  outerSpace?: ShorthandList<Spacing<S>>;
   outerSpaceBlockStart?: Spacing<S>;
   outerSpaceBlockEnd?: Spacing<S>;
   outerSpaceInlineStart?: Spacing<S>;
@@ -17,11 +18,7 @@ export interface OuterSpaceProps<S> {
 }
 
 export interface InnerSpaceProps<S> {
-  innerSpace?:
-    | [Spacing<S>]
-    | Tuple<Spacing<S>>
-    | Triple<Spacing<S>>
-    | Quadrupel<Spacing<S>>;
+  innerSpace?: ShorthandList<Spacing<S>>;
   innerSpaceBlockStart?: Spacing<S>;
   innerSpaceBlockEnd?: Spacing<S>;
   innerSpaceInlineStart?: Spacing<S>;
