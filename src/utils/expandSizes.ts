@@ -1,6 +1,9 @@
 import { Quadrupel } from '../SpaceProps';
 
 /**
+ * Expands an array of given entries to a quadrupel following the clockwise CSS shorthand property declaration
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases
+ *
  * @template S
  * @param {S[]} source
  * @returns {([] | Quadrupel<S>)}
