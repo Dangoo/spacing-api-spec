@@ -87,7 +87,7 @@ import { MyComponent, Spaces } from '@scope/design-system';
 <MyComponent outerSpace={[Spaces.M, Spaces.S, Spaces.XL]}>
 
 /** Resulting styles
- * margin: var(--space--m) var(space--s) var(--space--xl);
+ * margin: var(--space--m) var(--space-s) var(--space--xl);
  * 
  * @supports(margin-block-end: 0) {
  *     margin-block-start: var(--space--m);
