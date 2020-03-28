@@ -1,4 +1,4 @@
-import { Quadrupel } from '../SpaceProps';
+import { Quadruple } from '../SpaceProps';
 
 /**
  * Expands an array of given entries to a quadrupel following the clockwise CSS shorthand property declaration
@@ -6,9 +6,9 @@ import { Quadrupel } from '../SpaceProps';
  *
  * @template S
  * @param {S[]} source
- * @returns {([] | Quadrupel<S>)}
+ * @returns {([] | Quadruple<S>)}
  */
-export function expandSizes<S>(source: S[]): [] | Quadrupel<S> {
+export function expandSizes<S>(source: S[]): [] | Quadruple<S> {
   switch (source.length) {
     case 0:
       return [];

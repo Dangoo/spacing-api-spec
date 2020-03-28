@@ -1,4 +1,4 @@
-import { Quadrupel, ShorthandList } from '../SpaceProps';
+import { Quadruple, ShorthandList } from '../SpaceProps';
 import { expandSizes } from './expandSizes';
 
 /**
@@ -12,7 +12,7 @@ import { expandSizes } from './expandSizes';
 export function mergeSizes<S>(
   shorthand: [] | ShorthandList<S>,
   overrides: [] | ShorthandList<S>
-): Quadrupel<S | undefined> {
+): Quadruple<S | undefined> {
   const expandedShorthand = expandSizes(shorthand);
   const [
     blockStart = expandedShorthand[0],
