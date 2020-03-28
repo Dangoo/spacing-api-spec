@@ -1,11 +1,7 @@
 export type Tuple<S> = [S, S];
 export type Triple<S> = [S, S, S];
 export type Quadruple<S> = [S, S, S, S];
-export type ShorthandList<S> =
-  | [S]
-  | Tuple<S>
-  | Triple<S>
-  | Quadruple<S>;
+export type ShorthandList<S> = [S] | Tuple<S> | Triple<S> | Quadruple<S>;
 
 export interface OuterSpaceProps<S> {
   outerSpace?: ShorthandList<S>;
