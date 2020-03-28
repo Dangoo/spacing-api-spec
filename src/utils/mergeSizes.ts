@@ -1,4 +1,4 @@
-import { Quadruple, ShorthandList } from '../SpaceProps';
+import type { Quadruple, ShorthandList } from '../SpaceProps';
 import { expandSizes } from './expandSizes';
 
 /**

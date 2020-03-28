@@ -1,4 +1,4 @@
-import { Quadruple } from '../SpaceProps';
+import type { Quadruple } from '../SpaceProps';
 
 /**
  * Expands an array of given entries to a quadrupel following the clockwise CSS shorthand property declaration

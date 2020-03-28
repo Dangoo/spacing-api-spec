@@ -1,10 +1,10 @@
-import { Quadruple } from '../SpaceProps';
+import type { Quadruple } from '../SpaceProps';
 
 function mapKeyToValue<S extends string>(
-  key: S,
+  key: S | undefined,
   valueMap: Record<S, string>
 ): string | undefined {
-  return valueMap.hasOwnProperty(key) ? valueMap[key] : undefined;
+  return key && valueMap.hasOwnProperty(key) ? valueMap[key] : undefined;
 }
 
 /**
