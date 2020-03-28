@@ -18,7 +18,7 @@ export function mergeSizes<S>(
     blockStart = expandedShorthand[0],
     inlineEnd = expandedShorthand[1],
     blockEnd = expandedShorthand[2],
-    inlineStart = expandedShorthand[3]
+    inlineStart = expandedShorthand[3],
   ] = expandSizes(overrides);
 
   return [blockStart, inlineEnd, blockEnd, inlineStart];

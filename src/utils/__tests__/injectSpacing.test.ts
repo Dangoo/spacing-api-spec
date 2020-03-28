@@ -1,7 +1,7 @@
 import { injectSpacing } from '../injectSpacing';
 
 const valueMap = {
-  m: '12px'
+  m: '12px',
 };
 
 describe('injectSpacing', () => {
@@ -32,7 +32,7 @@ describe('injectSpacing', () => {
       [
         `margin-block-start: 12px;`,
         `margin-inline-end: 12px;`,
-        `margin-inline-start: 12px;`
+        `margin-inline-start: 12px;`,
       ].join('\n')
     );
   });

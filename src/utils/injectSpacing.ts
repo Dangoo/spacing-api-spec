@@ -23,12 +23,12 @@ export function injectSpacing<S extends string>(
     [`${propertyName}-block-start`, mapKeyToValue(blockStart, valueMap)],
     [`${propertyName}-inline-end`, mapKeyToValue(inlineEnd, valueMap)],
     [`${propertyName}-block-end`, mapKeyToValue(blockEnd, valueMap)],
-    [`${propertyName}-inline-start`, mapKeyToValue(inlineStart, valueMap)]
+    [`${propertyName}-inline-start`, mapKeyToValue(inlineStart, valueMap)],
   ];
 
   const rules = propertyEntries
     .filter(([, value]) => value)
-    .map(entry => `${entry.join(': ')};`);
+    .map((entry) => `${entry.join(': ')};`);
 
   if (rules.length === 4) {
     return `${propertyName}: ${propertyEntries
